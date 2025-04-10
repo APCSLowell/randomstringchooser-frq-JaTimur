@@ -10,7 +10,7 @@ public class RandomStringChooser{
   public String getNext(){
     if(words.size()<1) return "NONE";
     else{
-      int n=(int)(Math.random()*words.size());
+      int n=(int)(Math.random()*list.size());
       return words.remove(n);
     }
   }
