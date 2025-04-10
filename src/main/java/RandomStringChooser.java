@@ -1,16 +1,17 @@
 import java.util.*;
 public class RandomStringChooser{
-  private String[] list;
-  private int used;
-  //?
+  private ArrayList<String> list;
   public RandomStringChooser(String[] array){
-    list=array;
-    used=0;
+    list=new ArrayList<String>();
+    for(int n=0;n<array.length;n++){
+      list.add(array[n]);
+    }
   }
   public String getNext(){
-    if(used>=list.length){}
+    if(words.size()<1) return "NONE";
+    else{
+      int n=(int)(Math.random()*words.size());
+      return words.remove(n);
+    }
   }
-  
-  //Heads up! 
-  //You will get a very confusing error message until you have working code in part b as well
 }
