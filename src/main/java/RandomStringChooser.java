@@ -8,10 +8,10 @@ public class RandomStringChooser{
     }
   }
   public String getNext(){
-    if(words.size()<1) return "NONE";
+    if(list.size()<1) return "NONE";
     else{
       int n=(int)(Math.random()*list.size());
-      return words.remove(n);
+      return list.remove(n);
     }
   }
 }
